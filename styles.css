@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    background-color: blue;
+}
+
+header>div {
+    flex: 1;
+    color: white;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    flex: 4;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+nav a:first-child {
+    font-weight: bold;
+}
+
+a:hover {
+    color: orange;
+    font-size: 2rem;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+#wrapper #users-section-name {
+    display: block;
+    /* margin: left 16px; */
+    margin-right: auto;
+    font-weight: bold;
+    /* flex doesnt work why? ??????????????*/
+    /* display: flex; */
+    /* justify-content: flex-start;  */
+}
+
+form {
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    border-radius: 10px;
+}
+
+form div {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+form div label {
+    display: flex;
+    font-weight: bold;
+    flex: 1;
+}
+
+form div input {
+    flex: 3;
+}
+
+
+/* <select> tag doesnot change size ?????????????????????????*/
+
+
+/* form div select {
+    flex: 3;
+}
+#departments {
+    flex: 3;
+} */
+
+#clear-save #save,
+button {
+    width: 6rem;
+    height: 2.5rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+#save {
+    background-color: blue;
+    color: white;
+}
+
+#clear-save #save:hover,
+button:hover {
+    background-color: ivory;
+    color: green;
+    font-size: 2rem;
+}
+
+#clear-save button:hover {
+    color: tomato;
+}
+
+#saved-users {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#saved-users div {
+    width: calc((100%/3) - 4rem);
+    display: flex;
+    flex-direction: column;
+    border: solid 1px black;
+    align-items: center;
+    text-align: center;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+@media(max-width:750px) {
+    header {
+        flex-direction: column;
+    }
+    header>div {
+        padding: 0;
+        padding-left: 1rem;
+    }
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 1rem;
+    }
+    nav a {
+        margin-top: 1rem;
+    }
+    #saved-users div {
+        width: 100%;
+    }
+    form h2 {
+        margin-left: 1rem;
+    }
+    form div {
+        flex-direction: column;
+        margin-left: 1rem;
+    }
+    form div label {
+        display: flex;
+        margin-bottom: 1rem;
+    }
+    form {
+        width: 100%;
+        align-items: flex-start;
+    }
+    #clear-save {
+        width: calc(100% - 2rem);
+    }
+    #clear-save #save,
+    button {
+        width: 100%;
+    }
+}
